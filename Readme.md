@@ -1,6 +1,22 @@
-# Project Name
+# Gartner Assignment
 
-A brief description of your project.
+Setting Up docker image for mongodb, please make sure docker(https://www.docker.com/get-started) is already installed
+
+
+```
+docker pull mongo
+```
+
+```
+docker run --name my-mongodb -p 27017:27017 -d mongo
+```
+
+### To check creation of mongo db is successful
+```
+docker ps
+
+```
+
 
 ## Installation
 
@@ -16,25 +32,28 @@ npm install
 
 ## Usage
 
-1. Start the application using the following command:
+
+
+1. Open your browser and navigate to `http://localhost:3000` to access the application.
+
+## Configuration
+
+Update Mongo db configure in config/database.js.Replace below url
+
+```
+ await mongoose.connect('mongodb://localhost:27017/mydatabase')
+```
+
+2. Start the application using the following command:
 
 
 ```
 npm start
 ```
 
-2. Open your browser and navigate to `http://localhost:3000` to access the application.
-
-## Configuration
-
-You may need to configure the project in order to customize certain aspects. Here are the configuration files and directories you should be aware of:
-
-- `config/`: Contains configuration files for different environments (e.g., development, production).
-- `config/app.js`: Main configuration file for the application.
-
 ## Project Structure
 
-Here's the structure of the project:
+The structure of the project:
 
 bin/
 config/
@@ -60,11 +79,3 @@ npm test
 ```
 
 
-
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
