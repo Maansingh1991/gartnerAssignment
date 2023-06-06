@@ -30,12 +30,6 @@ npm install
 ```
 
 
-## Usage
-
-
-
-1. Open your browser and navigate to `http://localhost:3000` to access the application.
-
 ## Configuration
 
 Update Mongo db configure in config/database.js.Replace below url
@@ -51,10 +45,16 @@ Update Mongo db configure in config/database.js.Replace below url
 npm start
 ```
 
+## Usage
+
+
+
+1. Open your browser and navigate to `http://localhost:8000` to access the application.
+
 ## Project Structure
 
 The structure of the project:
-
+```
 bin/
 config/
 middleware/
@@ -68,7 +68,7 @@ app.js
 Dockerfile
 package-lock.json
 package.json
-
+```
 
 ## Testing
 
