@@ -18,7 +18,7 @@ docker ps
 ```
 
 
-## Installation
+## Backend Installation
 
 1. Clone the repository.
 2. Install the dependencies using the following command:
@@ -78,4 +78,16 @@ To run the tests, use the following command:
 npm test
 ```
 
+## Frontend installation
+- Set environment variable process.env.baseUrl otherwise by default app with run on 3000 port
+- Install
+```
+npm install
+```
+inside client folder
+
+- Run
+```
+npm start
+```
 

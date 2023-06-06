@@ -4,7 +4,7 @@ const Book = require('../models/Book');
 const { authenticate } = require('../middleware/auth');
 
 // Create a new book
-router.post('/books', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { title, author, price, rating } = req.body;
 
@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get a book by ID
-router.get('/books/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const book = await Book.findById(req.params.id);
 
@@ -54,7 +54,7 @@ router.get('/books/:id', async (req, res) => {
 });
 
 // Update a book by ID
-router.put('/books/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { title, author, price, rating } = req.body;
 
@@ -76,7 +76,7 @@ router.put('/books/:id', async (req, res) => {
 });
 
 // Delete a book by ID
-router.delete('/books/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const book = await Book.findByIdAndRemove(req.params.id);
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Box, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { login } from "../src/api/login";
+import { login } from "../api/login";
 
 const theme = createTheme({
   palette: {
