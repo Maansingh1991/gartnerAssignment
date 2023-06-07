@@ -3,7 +3,7 @@ const router = express.Router();
 const Cart = require('../models/Cart');
 const Book = require('../models/Book');
 
-// Get the user's cart
+
 router.get('/',  async (req, res) => {
   try {
     const userId = req.user._id;
@@ -20,7 +20,7 @@ router.get('/',  async (req, res) => {
   }
 });
 
-// Add a book to the cart
+
 router.post('/', async (req, res) => {
   try {
     const { bookId, quantity } = req.body;
@@ -58,7 +58,6 @@ router.post('/', async (req, res) => {
 
 
 
-// Update the quantity of a book in the cart
 router.put('/:bookId', async (req, res) => {
   try {
     const { bookId } = req.params;
@@ -85,7 +84,7 @@ router.put('/:bookId', async (req, res) => {
   }
 });
 
-// Remove a book from the cart
+
 router.delete('/:bookId',  async (req, res) => {
   try {
     const { bookId } = req.params;
@@ -106,7 +105,7 @@ router.delete('/:bookId',  async (req, res) => {
   }
 });
 
-// Clear the user's cart
+
 router.delete('/', async (req, res) => {
   try {
     const userId = req.user._id;

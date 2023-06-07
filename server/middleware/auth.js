@@ -12,7 +12,7 @@ const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
 };
 
-// Create the JWT strategy
+
 const jwtStrategy = new JwtStrategy(jwtOptions, async (payload, done) => {
   try {
     
